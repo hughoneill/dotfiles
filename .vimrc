@@ -17,7 +17,6 @@ Plugin 'gmarik/Vundle.vim'
 " used Bundle instead of Plugin)
  
 Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -31,7 +30,6 @@ Plugin 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 " Plugin 'Valloric/YouCompleteMe'
-" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
  
@@ -49,16 +47,6 @@ nnoremap <leader>s :set spell!
  
 " Python additions
 set encoding=utf-8
-" for PEP 8 indentation
-au BufNewFile,BufRead *.py,
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
- 
 let python_highlight_all=1
 syntax on
  
@@ -77,9 +65,9 @@ set hlsearch
 " endif
 " call togglebg#map("<F5>")
 if has('win32')
-            set guifont=IBM\ Plex\ Mono:h11
+    set guifont=IBM\ Plex\ Mono:h11
 else
-            set guifont=Source\ Code\ Pro\ for\ Powerline:h16
+    set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 endif
  
 " Additions from Drew Neil vimcasts
@@ -105,7 +93,7 @@ if has("autocmd")
   autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
   autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType markdown setlocal ts=4 sts=4 sw=4 tw=79 ff=unix expandtab autoindent
- 
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=79 ff=unix expandtab autoindent
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
 endif
