@@ -27,11 +27,12 @@ Plugin 'w0rp/ale'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vimwiki/vimwiki'
  
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,7 +40,7 @@ filetype plugin indent on    " required
  
 " Recommended additions from Daniel Miessler dot com
 inoremap jk <ESC>
-let mapleader = ","
+" let mapleader = ","
  
 set spell spelllang=en_us
 nnoremap <leader>f 1z=
@@ -96,6 +97,7 @@ if has("autocmd")
   autocmd FileType python setlocal ts=4 sts=4 sw=4 tw=79 ff=unix expandtab autoindent
   " Treat .rss files as XML
   autocmd BufNewFile,BufRead *.rss setfiletype xml
+  au FileType vimwiki set syntax=pandoc
 endif
 " vimcast #16 soft-wrapping text
 command! -nargs=* Wrap set wrap linebreak nolist
