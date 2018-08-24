@@ -22,7 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'w0rp/ale'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'godlygeek/tabular'
@@ -33,14 +33,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vimwiki/vimwiki'
+Plugin 'morhetz/gruvbox'
  
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
- 
+set termguicolors 
 " Recommended additions from Daniel Miessler dot com
 inoremap jk <ESC>
-" let mapleader = ","
+let mapleader = ","
  
 set spell spelllang=en_us
 nnoremap <leader>f 1z=
@@ -53,8 +54,8 @@ syntax on
  
 " colorscheme xoria256
 syntax enable
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme gruvbox
  
 set hlsearch
  
@@ -138,3 +139,5 @@ let g:airline_detect_spell=0
 let g:airline_detect_spelllang=0
 let g:airline_theme='light'
 
+" vimwiki/vimwiki
+let g:vimwiki_list=[{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
