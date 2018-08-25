@@ -67,7 +67,7 @@ set hlsearch
 " endif
 " call togglebg#map("<F5>")
 if has('win32')
-    set guifont=IBM\ Plex\ Mono:h11
+    set guifont=Consolas:h12
 else
     set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 endif
